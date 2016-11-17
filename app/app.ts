@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Platform, ionicBootstrap, MenuController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
+import {ConncetionServices} from './providers/conncetion-services/conncetion-services';
 
 import {HomePage} from './pages/home/home';
 import {MenuTestePage} from './pages/menu-teste/menu-teste';
@@ -19,7 +20,7 @@ export class MyApp {
   this.pages = [
     {component: HomePage, title:  'Home', icon: 'home'},
     {component: MenuTestePage, title:  'Menu Teste', icon: 'menu'},
-    {component: GeneratedTestPage, title:  'GEnerated PAge', icon: 'home'}
+    {component: GeneratedTestPage, title:  'Pagina Gerada', icon: 'home'}
   ];
 
     platform.ready().then(() => {
@@ -41,7 +42,7 @@ MenuOpened():void{
 
 }
 
-ionicBootstrap(MyApp, [], {
+ionicBootstrap(MyApp, [ConncetionServices], {
     menuType: 'push',
     platforms: {
       ios: {

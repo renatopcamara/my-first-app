@@ -12,6 +12,7 @@ export class GeneratedTestPage {
     this.connectionService.getCep('20520051')
       .then((res) => {
         let json = res.json();
+        console.log(json.logradouro);
         console.log(json.localidade);
       }).catch((err) => {
         console.log(err);

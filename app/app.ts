@@ -6,6 +6,7 @@ import {ConncetionServices} from './providers/conncetion-services/conncetion-ser
 import {HomePage} from './pages/home/home';
 import {MenuTestePage} from './pages/menu-teste/menu-teste';
 import {GeneratedTestPage} from './pages/generated-test/generated-test';
+import {AlertaPage} from './pages/alerta/alerta';
 
 @Component({
   templateUrl: 'build/app.html'
@@ -20,7 +21,8 @@ export class MyApp {
   this.pages = [
     {component: HomePage, title:  'Home', icon: 'home'},
     {component: MenuTestePage, title:  'Menu Teste', icon: 'menu'},
-    {component: GeneratedTestPage, title:  'Pagina Gerada', icon: 'home'}
+    {component: GeneratedTestPage, title:  'Pagina Gerada', icon: 'home'},
+    {component: AlertaPage, title:  'Alerta', icon: 'home'}
   ];
 
     platform.ready().then(() => {
@@ -36,7 +38,7 @@ export class MyApp {
   }
 
 MenuOpened():void{
-  console.log('Abriu');
+  console.log('Abriu o menu');
 
 }
 

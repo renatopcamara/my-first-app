@@ -15,12 +15,17 @@
 
 </ion-navbar>
 
-
-
 <ion-content padding class="generated-test">
 
-<p>Clique no botão abaixo para entrar com o CEP</p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>CEP</ion-label>
+      <ion-input numCEP="CEP" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
 
-<button (click)='InputCEP()'>Entre com CEP</button>
+<p>Olá {{ user }}</p>
+
+  <button (click)="buscarCep()">Buscar CEP</button>
 
 </ion-content>

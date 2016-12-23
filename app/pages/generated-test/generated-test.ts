@@ -18,34 +18,10 @@ export class GeneratedTestPage {
         let json = res.json();
         console.log(json.logradouro);
         console.log(json.localidade);
+        user = json.logradouro;
       }).catch((err) => {
         console.log(err);
       })
   }
-
-  InputCEP() {
-    let alert = Alert.create({
-      title:'Entrada de Dados',
-      message: 'Digite o CEP que deseja o endereço',
-      inputs: [
-        {
-          name: 'CEP',
-          placeholder:  '0000000'
-        }
-      ],
-      buttons: [
-        {
-          text:'Cancelar'
-        },
-        {
-          text: 'Ok',
-          handler: (data) =>{
-            this.user = data.nome;
-          }
-
-        }]
-    });
-   this.nav.present(alert);
-
  }
 }

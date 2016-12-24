@@ -5,23 +5,24 @@ import { ConncetionServices } from './../../providers/conncetion-services/connce
 @Component({
   templateUrl: 'build/pages/generated-test/generated-test.html',
 })
-export class GeneratedTestPage {
+export class GeneratedTestPage
+  {
 
   user: string='none';
   cepDesejado: string;
 
   constructor(private nav: NavController, private connectionService: ConncetionServices) {}
 
-  buscarCep() : void{
-    this.connectionService.getCep('20520051')
-      .then((res) => {
+  buscarCep() : void
+    {
+    this.connectionService.getCep('20520051').then((res) =>
+        {
         let json = res.json();
         console.log(json.logradouro);
         console.log(json.localidade);
-        user = json.logradouro;
-      }).catch((err) => {
+        }).catch((err) =>
+        {
         console.log(err);
-      })
+        });
+    }
   }
- }
-}

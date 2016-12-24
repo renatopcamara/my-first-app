@@ -24,13 +24,7 @@ export class MyApp {
 
   this.pages = [
     {component: HomePage, title:  'Home', icon: 'home'},
-    {component: MenuTestePage, title:  'Menu Teste', icon: 'albums'},
-    {component: GeneratedTestPage, title:  'Pagina Gerada', icon: 'alert'},
-    {component: AlertaPage, title:  'Alerta', icon: 'alarm'},
-    {component: CartoesTestPage, title:  'Cartoes', icon: 'clock'},
-    {component: BotoesTestPage, title:  'Botoes', icon: 'favorite'},
-    {component: IconesTestPage, title:  'Icones', icon: 'star'},
-    {component: EntradasTestPage, title:  'Entradas', icon: 'apps'}
+    {component: GeneratedTestPage, title:  'Buscar Endereço', icon: 'alert'},
   ];
 
     platform.ready().then(() => {

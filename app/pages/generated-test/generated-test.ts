@@ -13,15 +13,24 @@ export class GeneratedTestPage {
   constructor(private nav: NavController, private connectionService: ConncetionServices) {}
 
   buscarCep() : void{
-    this.connectionService.getCep('20520051')
+    this.connectionService.getCep(this.cepDesejado)
       .then((res) => {
         let json = res.json();
+        console.log(json);
         console.log(json.logradouro);
         console.log(json.localidade);
+
+        let texto = ('Cep: ' + this.cepDesejado + ' Logradouro: ' + json.logradouro + ' Localidade: ' + json.localidade)
+        let alert = Alert.create({
+          message: texto
+        });
+        this.nav.present(alert);
+
       }).catch((err) => {
         console.log(err);
       })
   }
+
 
   InputCEP() {
     let alert = Alert.create({

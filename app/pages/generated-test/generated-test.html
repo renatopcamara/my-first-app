@@ -7,20 +7,18 @@
 
   <ion-title>Busca de Endereço</ion-title>
 
-  <ion-buttons right>
-    <button menuToggle="right">
-      <ion-icon name = "menu"></ion-icon>
-    </button>
-  </ion-buttons>
-
 </ion-navbar>
-
-
 
 <ion-content padding class="generated-test">
 
-<p>Clique no botão abaixo para entrar com o CEP</p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Entre com o CEP (0000000)</ion-label>
+      <ion-input name="cepDesejado" type="text" [(ngModel)]="cepDesejado"></ion-input>
+    </ion-item>
 
-<button (click)='InputCEP()'>Entre com CEP</button>
+  </ion-list>
+
+  <button block (click)="buscarCep()">Buscar Endereço</button>
 
 </ion-content>

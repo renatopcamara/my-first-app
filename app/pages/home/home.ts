@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {NavController} from 'ionic-angular';
-
+import {GeneratedTestPage} from '../generated-test/generated-test';
 import {MenuTestePage} from '../menu-teste/menu-teste';
 
 @Component({
@@ -12,7 +12,7 @@ export class HomePage {
   }
 
   pushPage() : void{
-    this.navCtrl.push(MenuTestePage)  ;
+    this.navCtrl.push(GeneratedTestPage)  ;
   }
 
 }

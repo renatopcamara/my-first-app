@@ -1,6 +1,6 @@
 {
-  "name": "curso-iniciando-ionic2",
-  "app_id": "453419a6",
+  "name": "my-first-app",
+  "app_id": "",
   "v2": true,
   "typescript": true,
   "DefaultBrowser": "chrome"

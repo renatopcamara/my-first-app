@@ -1,0 +1,41 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+
+  <ion-title>Hoje Tenho</ion-title>
+
+</ion-navbar>
+
+<ion-content padding class="hoje-tenho-home">
+
+<p>
+Selecione abaixo o veiculo
+</p>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="./../../imagens/fla.jpg">
+      </ion-thumbnail>
+      <h2 danger>Celta</h2>
+      <p>info sobre o carro</p>
+      <button ion-button secondary clear item-right>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="./../../imagens/fla.jpg">
+      </ion-thumbnail>
+      <h2 danger>GSX650F</h2>
+      <p>alg info</p>
+      <button ion-button danger clear item-right>View</button>
+    </ion-item>
+  </ion-list>
+
+  <button fab fab-bottom fab-right danger (click)="addCar()">
+    <ion-icon name="add"></ion-icon>
+  </button>
+
+
+</ion-content>

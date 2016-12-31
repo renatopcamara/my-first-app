@@ -6,11 +6,8 @@ import {ConncetionServices} from './providers/conncetion-services/conncetion-ser
 import {HomePage} from './pages/home/home';
 import {MenuTestePage} from './pages/menu-teste/menu-teste';
 import {GeneratedTestPage} from './pages/generated-test/generated-test';
-import {AlertaPage} from './pages/alerta/alerta';
+import {HojeTenhoHomePage} from './pages/hoje-tenho-home/hoje-tenho-home';
 import {CartoesTestPage} from './pages/cartoes-test/cartoes-test';
-import {BotoesTestPage} from './pages/botoes-test/botoes-test';
-import {IconesTestPage} from './pages/icones-test/icones-test';
-import {EntradasTestPage} from './pages/entradas-test/entradas-test';
 
 @Component({
   templateUrl: 'build/app.html'
@@ -25,6 +22,7 @@ export class MyApp {
   this.pages = [
     {component: HomePage, title:  'Home', icon: 'home'},
     {component: GeneratedTestPage, title:  'Buscar Endereço', icon: 'alert'},
+    {component: HojeTenhoHomePage, title:  'Hoje Tenho', icon: 'alarm'},
   ];
 
     platform.ready().then(() => {

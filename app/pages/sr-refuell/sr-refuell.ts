@@ -24,6 +24,5 @@ export class SrRefuellPage {
       message: texto
     });
     this.nav.present(alert);
-    close();
   }
 }

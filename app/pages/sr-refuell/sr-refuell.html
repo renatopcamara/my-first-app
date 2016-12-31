@@ -1,0 +1,48 @@
+<!--
+  Generated template for the SrRefuellPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar>
+  <ion-buttons start>
+    <button (click)="close()">
+      <ion-icon name="close">
+      </ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-title>Registro de Abastecimento</ion-title>
+</ion-navbar>
+
+<ion-content padding class="sr-refuell">
+
+<p>Apresentar os dados do último abastecimento do CELTA:</p>
+<p>Data: 99/99/99</p>
+<p>Odômetro: 99999 km</p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Odômetro</ion-label>
+      <ion-input name="Odometro" type="number" [(ngModel)]="odometroAtual"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Litros</ion-label>
+      <ion-input name="Litros" type="number" [(ngModel)]="litros"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Valor</ion-label>
+      <ion-input name="Valor" type="number" [(ngModel)]="valor"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+
+<p>Depois de clicar em registrar, sumir com o botão, fazer os cálculos e apresentar um alerta com Km/L </p>
+
+<ion-footer>
+  <ion-toolbar>
+    <button block (click)="Estatistica()">Registar</button>
+  </ion-toolbar>
+</ion-footer>
+
+</ion-content>

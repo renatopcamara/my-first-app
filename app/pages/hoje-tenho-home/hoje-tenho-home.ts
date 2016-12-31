@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Modal, Alert } from 'ionic-angular';
+import { VeiculoModalPage} from  '../veiculo-modal/veiculo-modal';
 
 /*
   Generated class for the HojeTenhoHomePage page.
@@ -14,5 +15,27 @@ export class HojeTenhoHomePage {
 
   item: any;
 
-  constructor(private nav: NavController) {}
+  constructor(private nav: NavController) {
+
+  }
+
+
+  openVeiculo() {
+    let modal = Modal.create(VeiculoModalPage);
+
+    modal.onDismiss(() => {
+      console.log('passei aqui no modal');
+      });
+
+    this.nav.present(modal);
+  }
+
+  addCar() {
+    let texto = (' Abre tela para adicionar novo veiculo')
+    let alert = Alert.create({
+      message: texto
+    });
+    this.nav.present(alert);
+  }
+
 }

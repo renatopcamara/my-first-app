@@ -15,7 +15,7 @@ import {CartoesTestPage} from './pages/cartoes-test/cartoes-test';
 export class MyApp {
 
     pages:  Array<{component: any, title: string, icon: string}>;
-    rootPage: any = HomePage;
+    rootPage: any = HojeTenhoHomePage;
 
   constructor(platform: Platform, private MenuCtrl: MenuController) {
 

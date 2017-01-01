@@ -30,7 +30,7 @@ export class VeiculoModalPage {
   }
 
   Relatorios() {
-    let texto = ('Apresenta os dados historicos de abastecimentos e todos as outras intervenções no veiculo')
+    let texto = ('Apresenta tela com relatórios: 1-lista todas os serviços realizados, 2-lista todos os abastecimentos realizados ')
     let alert = Alert.create({
       message: texto
     });
@@ -38,7 +38,7 @@ export class VeiculoModalPage {
   }
 
   Estatisticas() {
-    let texto = ('Apresenta tela dos indicadores comparativos com as especificaçoes de fábrica')
+    let texto = ('Apresenta tela dos indicadores: Quanto anda (Km/Dia), Quanto consume (Km/L) ')
     let alert = Alert.create({
       message: texto
     });

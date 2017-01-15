@@ -80,6 +80,42 @@ export class MyTodosPage {
     );
   }
 
+  public updateTodo(id: string, atividade: string) {
+    let prompt = Alert.create({
+      title: 'New Todo',
+      message: "O que voce quer atualizar?",
+      inputs: [
+        {
+          name: 'name',
+          placeholder: atividade
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            this.saveTodo(data.name);
+          }
+        }
+      ]
+    });
+    this.nav.present(prompt);
+
+
+    this.backandService.updateTodo(id).subscribe(
+      data => {
+        this.loadTodos();
+      },
+      err => this.logError(err)
+    );
+  }
+
   public logError(err: TemplateStringsArray) {
     console.error('Error: ' + err);
   }

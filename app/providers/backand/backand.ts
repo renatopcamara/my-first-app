@@ -11,9 +11,9 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class Backand {
   data: any;
-  auth_token: {header_name: string, header_value: string} = {header_name: 'AnonymousToken', header_value: '37491c04-90ca-4dc0-b132-cbcdf243d317'};
+  auth_token: {header_name: string, header_value: string} = {header_name: 'AnonymousToken', header_value: '9c0ac884-245d-410b-b86b-bc0b2278c6d5'};
   api_url: string = 'https://api.backand.com';
-  app_name: string = 'parafazer';
+  app_name: string = 'afazeres';
 
   constructor(public http: Http) {
     this.data = null;
@@ -43,6 +43,19 @@ export class Backand {
       return res.json();
     });
   }
+
+  public updateTodo(name: string) {
+    let data = JSON.stringify({name: name});
+
+    return this.http.put(this.api_url + '/1/objects/todos?returnObject=true', data,
+    {
+      headers: this.authHeader()
+    })
+    .map(res => {
+      return res.json();
+    });
+  }
+
 
   public removeTodo(id: string) {
     return this.http.delete(this.api_url + '/1/objects/todos/' + id,

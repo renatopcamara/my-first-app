@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Page, Alert, NavController } from 'ionic-angular';
+import { Page, Alert, NavController, ToastController } from 'ionic-angular';
 import { Backand } from '../../providers/backand/backand';
 
 /*
@@ -15,10 +15,49 @@ import { Backand } from '../../providers/backand/backand';
 export class MyTodosPage {
 
   todos:any;
+  user: string='none';
 
   constructor(private nav: NavController, public backandService: Backand) {
        this.loadTodos();
   }
+
+    private showToast() {
+      let toast = Toast.create({
+        message: 'acessando o BD...',
+        duration: 3000,
+        showCloseButton: true,
+        closeButtonText: 'OK'
+      });
+      toast.onDismiss(() => {
+        console.log('Toast finalizado');
+      });
+      this.nav.present(toast);
+    }
+
+    public showAlert() {
+    let alert = Alert.create({
+      title:'Alert de teste',
+      message: 'Digite seu nome',
+      inputs: [
+        {
+          name: 'nome',
+          placeholder:  'Seu nome'
+        }
+      ],
+      buttons: [
+        {
+          text:'Cancelar'
+        },
+        {
+          text: 'Ok',
+          handler: (data) =>{
+            this.user = data.nome;
+          }
+
+        }]
+    });
+    this.nav.present(alert);
+    };
 
   private loadTodos() {
     this.backandService.getTodos()
@@ -28,6 +67,7 @@ export class MyTodosPage {
       },
       err => this.logError(err)
     );
+    this.showToast();
   }
 
   public todoSelected(item: {}) {
@@ -55,6 +95,7 @@ export class MyTodosPage {
           text: 'Save',
           handler: data => {
             this.saveTodo(data.name);
+            this.showToast();
           }
         }
       ]

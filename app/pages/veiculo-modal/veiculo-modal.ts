@@ -14,7 +14,6 @@ import { SrRefuellPage} from '../sr-refuell/sr-refuell';
 })
 export class VeiculoModalPage {
 
-
   constructor(private nav: NavController, private view: ViewController) {}
 
   close() {

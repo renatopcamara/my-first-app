@@ -10,26 +10,33 @@
 
 <ion-content padding class="hoje-tenho-home">
 
-<p>
-Selecione abaixo o veiculo
-</p>
-
   <ion-list>
-    <ion-item>
+    <button ion-item (click)='openVeiculo()'>
       <ion-thumbnail item-left>
         <img src="./../../imagens/fla.jpg">
       </ion-thumbnail>
-      <h2 danger>Celta</h2>
-      <p>info sobre o carro</p>
+      <h3 secondary>Celta</h3>
+      <p h2>info sobre o carro</p>
+      <p>Atenção</p>
       <button ion-button secondary clear item-right (click)='openVeiculo()'>View</button>
-      <button ion-button secondary clear item-upper (click)='openVeiculo()'>Odometro</button>
-    </ion-item>
+    </button>
+
+    <button ion-item secondary (click)='openVeiculo()'>
+      <ion-thumbnail item-left>
+        <img src="./../../imagens/fla.jpg">
+      </ion-thumbnail>
+      <h3>GSX650F</h3>
+      <h2>alg info</h2>
+      <p>normal</p>
+      <button ion-button danger clear item-right (click)='openVeiculo()'>View</button>
+    </button>
+
     <ion-item>
       <ion-thumbnail item-left>
         <img src="./../../imagens/fla.jpg">
       </ion-thumbnail>
-      <h2 danger>GSX650F</h2>
-      <p>alg info</p>
+      <h2 danger>Sandero</h2>
+      <p>Odometro 9km/lo</p>
       <button ion-button danger clear item-right (click)='openVeiculo()'>View</button>
     </ion-item>
   </ion-list>
@@ -37,6 +44,5 @@ Selecione abaixo o veiculo
   <button fab fab-bottom fab-right danger (click)="addCar()">
     <ion-icon name="add"></ion-icon>
   </button>
-
 
 </ion-content>

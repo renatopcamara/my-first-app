@@ -9,6 +9,7 @@ import {GeneratedTestPage} from './pages/generated-test/generated-test';
 import {HojeTenhoHomePage} from './pages/hoje-tenho-home/hoje-tenho-home';
 import {CartoesTestPage} from './pages/cartoes-test/cartoes-test';
 import {MyTodosPage} from './pages/my-todos/my-todos';
+import {MeusCarrosPage} from './pages/meus-carros/meus-carros';
 
 @Component({
   templateUrl: 'build/app.html'
@@ -25,6 +26,7 @@ export class MyApp {
     {component: GeneratedTestPage, title:  'Buscar Endereço', icon: 'alert'},
     {component: HojeTenhoHomePage, title:  'Hoje Tenho', icon: 'alarm'},
     {component: MyTodosPage, title:  'My TODOs', icon: 'alarm'},
+    {component: MeusCarrosPage, title:  'Meus Carros', icon: 'alarm'},
   ];
 
     platform.ready().then(() => {
